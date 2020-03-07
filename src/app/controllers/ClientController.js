@@ -8,6 +8,12 @@ class ClientController {
     return res.json(clients);
   }
 
+  async findByCpf(cpf) {
+    const client = await Client.findOne({ where: { cpf } });
+    if (client) return client;
+    return undefined;
+  }
+
   async store(req, res) {
     const { cpf } = req.body;
     const clientExists = await Client.findOne({ where: { cpf } });

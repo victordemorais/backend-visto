@@ -3,7 +3,10 @@ import LocationController from '../app/controllers/LocationController';
 
 const locationRoutes = new Router();
 
-locationRoutes.get('/', (req, res) => {
-  return res.json({ message: 'hello world' });
-});
+locationRoutes.get('/', LocationController.list);
+locationRoutes.get('/listbyClient', LocationController.findLocationsByCpf);
+locationRoutes.post('/create', LocationController.store);
+locationRoutes.put('/update/:id', LocationController.update);
+locationRoutes.delete('/delete/:id', LocationController.delete);
+
 export default locationRoutes;
