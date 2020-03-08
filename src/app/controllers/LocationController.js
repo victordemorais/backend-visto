@@ -79,7 +79,7 @@ class LocationController {
   }
 
   async findLocationsByCpf(req, res) {
-    const { cpf } = req.body;
+    const { cpf } = req.params;
 
     const { id } = await Client.findByCpf(cpf);
     if (!id)

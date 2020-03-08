@@ -1,6 +1,6 @@
 import express from 'express';
 import routes from './routes';
-
+import documentationRoute from './swaggerDoc';
 import './database';
 
 class App {
@@ -16,6 +16,7 @@ class App {
 
   routes() {
     this.server.use(routes);
+    this.server.use(documentationRoute);
   }
 }
 
