@@ -14,13 +14,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:4000/users/",
+							"raw": "localhost:4000/clients/",
 							"host": [
 								"localhost"
 							],
 							"port": "4000",
 							"path": [
-								"users",
+								"clients",
 								""
 							]
 						}
@@ -49,13 +49,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:4000/users/create",
+							"raw": "localhost:4000/clients/create",
 							"host": [
 								"localhost"
 							],
 							"port": "4000",
 							"path": [
-								"users",
+								"clients",
 								"create"
 							]
 						}
@@ -68,13 +68,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:4000/users/delete/1",
+							"raw": "localhost:4000/clients/delete/1",
 							"host": [
 								"localhost"
 							],
 							"port": "4000",
 							"path": [
-								"users",
+								"clients",
 								"delete",
 								"1"
 							]
@@ -104,13 +104,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:4000/users/update",
+							"raw": "localhost:4000/clients/update",
 							"host": [
 								"localhost"
 							],
 							"port": "4000",
 							"path": [
-								"users",
+								"clients",
 								"update"
 							]
 						}
@@ -195,7 +195,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"cpf\": \"11871416663\"\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -203,14 +203,15 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:4000/locations/listbyClient",
+							"raw": "localhost:4000/locations/listbyClient/11871416663",
 							"host": [
 								"localhost"
 							],
 							"port": "4000",
 							"path": [
 								"locations",
-								"listbyClient"
+								"listbyClient",
+								"11871416663"
 							]
 						}
 					},
