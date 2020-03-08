@@ -18,8 +18,7 @@ services:
 
   backend:
     build: .
-    restart: always
-    command: npm start
+    command: 'npm start'
     ports:
       - '4000:4000'
     depends_on:
@@ -27,7 +26,10 @@ services:
     volumes:
       - .:/usr/app
     environment:
-      DB_SERVER: mysql:3306
+      DB_SERVER: mysql
+      DB_USER: root
+      DB_PASSWORD: root
+      DB_DATABASE: visto_cars
     networks:
       - mysql-compose-network
 

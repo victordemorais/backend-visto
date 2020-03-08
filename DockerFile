@@ -10,4 +10,5 @@ COPY . .
 
 EXPOSE 4000
 
+CMD ["npm", "db:migrate"]
 CMD ["npm", "start"]
