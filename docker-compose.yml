@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql
+    restart: always
+    ports:
+      - 3306:3306
+    expose:
+      - '3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: visto_cars
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+    networks:
+      - mysql-compose-network
+
+  backend:
+    build: .
+    restart: always
+    command: npm start
+    ports:
+      - '4000:4000'
+    depends_on:
+      - mysql
+    volumes:
+      - .:/usr/app
+    environment:
+      DB_SERVER: mysql:3306
+    networks:
+      - mysql-compose-network
+
+networks:
+  mysql-compose-network:
+    driver: bridge
