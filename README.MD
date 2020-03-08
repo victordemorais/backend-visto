@@ -19,6 +19,3 @@ Após a instalacão entre na pasta do projeto e execute o comando `docker-compos
 
 Projeto desenvolvido para processo seletivo em uma empresa sensacional `Arizona | Visto`.
 Tem como objetivo, a locação de veículos com base em clientes cadastrados.
-
-Pacotes Utilizados:
-React, React-Router-Dom, Redux, Redux-Saga, Material-U, Styled-Components, Axios, History
