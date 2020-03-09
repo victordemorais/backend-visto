@@ -18,6 +18,7 @@ services:
 
   backend:
     build: .
+    command: 'npm install && npm start'
     ports:
       - '4000:4000'
     depends_on:
