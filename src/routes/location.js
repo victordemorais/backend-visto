@@ -18,7 +18,7 @@ const locationRoutes = new Router();
 
 /**
  * @swagger
- * /location:
+ * /locations:
  *  get:
  *    tags:
  *      - Locações
